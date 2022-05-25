@@ -19,5 +19,7 @@ extension FollowersListVC {
     
     private func configureFollowersCollectionView() {
         view.addSubview(followersCollectionView)
+        followersCollectionView.accessibilityIdentifier = "followersList"
+        addBarButton.accessibilityIdentifier = "addToFavoritesButton"
     }
 }

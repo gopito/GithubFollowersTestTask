@@ -25,6 +25,7 @@ class GFFollowerItemVC: GFInfoItemsVC {
         cView.infoItem1.set(itemInfoType: .followers, withCount: user.followers)
         cView.infoItem2.set(itemInfoType: .following, withCount: user.following)
         cView.actionButton.set(backgroundColor: .systemGreen, title: "Get Followers")
+        cView.actionButton.accessibilityIdentifier = "getFollowersButton"
     }
     
     // MARK: Selectors

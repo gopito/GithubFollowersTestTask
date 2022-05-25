@@ -29,6 +29,7 @@ class SearchView: UIView {
         super.init(frame: frame)
         
         configureUI()
+        usernameTextField.accessibilityIdentifier = "usernameTextField"
     }
     
     required init?(coder: NSCoder) {
