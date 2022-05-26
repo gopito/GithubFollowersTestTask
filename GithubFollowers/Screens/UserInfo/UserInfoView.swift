@@ -38,6 +38,7 @@ class UserInfoView: UIView {
         super.init(frame: frame)
         
         configureUI()
+        setAccessibility()
         anchorViews()
     }
     
@@ -69,5 +70,10 @@ class UserInfoView: UIView {
         itemViewTwo.anchor(top: itemViewOne.bottomAnchor, leading: leadingAnchor, trailing: trailingAnchor, margin: .init(top: padding, left: padding, bottom: 0, right: padding), size: .init(width: 0, height: 140))
         
         dateLabel.anchor(top: itemViewTwo.bottomAnchor, leading: leadingAnchor, trailing: trailingAnchor, margin: .init(top: padding, left: padding, bottom: 0, right: padding), size: .init(width: 0, height: 18))
+    }
+    
+    private func setAccessibility() {
+        headerView.accessibilityIdentifier = "userInfoHeader"
+        dateLabel.accessibilityIdentifier = "dateLabel"
     }
 }

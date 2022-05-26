@@ -39,6 +39,7 @@ class FavoritesListVC: GFDataLoadingVC {
     private func configure() {
         navigationItem.title = Text.favorites
         navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.accessibilityIdentifier = "favoritesHeader"
         
         cView.tableView.delegate = self
         cView.tableView.dataSource = self
@@ -76,6 +77,7 @@ extension FavoritesListVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: FavoriteCell.reuseID, for: indexPath) as! FavoriteCell
         cell.favorite = favorites[indexPath.row]
+        cell.accessibilityIdentifier = "favoritesItem"
         
         return cell
     }

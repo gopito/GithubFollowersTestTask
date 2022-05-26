@@ -44,6 +44,8 @@ class FollowerCell: UICollectionViewCell {
     
     private func configureUI() {
         addViews()
+        avatarImageView.accessibilityIdentifier = "followersAvatar"
+        usernameLabel.accessibilityIdentifier = "followerLabel"
         anchorViews()
     }
     

@@ -23,6 +23,7 @@ class GFTabBarController: UITabBarController {
         let searchVC = SearchVC()
         searchVC.title = "Search"
         searchVC.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0)
+        searchVC.tabBarItem.accessibilityIdentifier = "searchTab"
         
         return UINavigationController(rootViewController: searchVC)
     }
@@ -31,6 +32,7 @@ class GFTabBarController: UITabBarController {
         let favoritesVC = FavoritesListVC()
         favoritesVC.title = "Favorites"
         favoritesVC.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 1)
+        favoritesVC.tabBarItem.accessibilityIdentifier = "favoritesTab"
         
         return UINavigationController(rootViewController: favoritesVC)
     }

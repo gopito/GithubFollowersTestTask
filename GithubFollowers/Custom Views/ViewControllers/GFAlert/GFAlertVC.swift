@@ -42,6 +42,8 @@ class GFAlertVC: UIViewController {
     
     private func configure() {
         cView.actionButton.addTarget(self, action: #selector(dismissVC), for: .touchUpInside)
+        cView.accessibilityIdentifier = "followersScreenAlert"
+        cView.actionButton.accessibilityIdentifier = "alertOkButton"
     }
     
     @objc private func dismissVC() {
